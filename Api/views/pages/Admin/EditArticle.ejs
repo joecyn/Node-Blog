@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../partials/Head'); %>
+</head>
+<body>
+    <%- include('../../partials/Dash'); %>
+   <div class="new_post">
+    <form action="/admin/EditArticle/<%=Article._id%>"  method="post" enctype="multipart/form-data">
+        <h1>NEW POST</h1>
+        <div>
+            <input type="text" placeholder="Title" name="title" value="<%=Article.title%>"/>
+        </div>
+        <div>
+            <input type="text" placeholder="Category" name="category" value="<%=Article.category%>"/>
+        </div>
+        
+       <div>
+        <input type="file" name="image" id="">
+       </div>
+       <div>
+        <input type="text" placeholder="Summary" name="summary" value="<%=Article.summary%>"/>
+    </div>
+        <div>
+            <textarea name="description"  cols="30" rows="10" id="description" ><%=Article.description%></textarea>
+        </div>
+        
+        <div>
+            <button type="submit">UPDATE</button>
+        </div>
+    </form>
+   </div>
+</body>
+
+</html>

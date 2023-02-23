@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <%- include('../../partials/Head'); %>
+</head>
+<body>
+    <%- include('../../partials/Dash'); %>
+    
+    <section>
+       
+           <div class="post-detail">
+
+           <div class="post-detail-img">
+            <img src="http://localhost:5000/<%=Article.image%>"/>
+           </div>
+           <div class="post-detail-content">
+        
+            <h1><%=Article.title%></h1>
+            <span>Author: Johana Gitari,Created: 15:30</span>
+            <p><%=Article.description%></p>
+            <div class="edit">
+                <li><a href="/admin/EditArticle/<%=Article.id%>"><i class="fa fa-pencil fa-fw"></i> EDIT</a></li>
+               <li><a href="/admin/DeleteArticle/<%=Article.id%>"><i class="fa-solid fa-trash-can "></i> DELETE</a></li>
+            </div>
+          </div>
+
+
+           </div>
+       
+       
+    </section>
+    
+</body>
+</html>

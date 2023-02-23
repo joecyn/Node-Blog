@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <%- include('../partials/Head'); %>
+</head>
+<body>
+    <%- include('../partials/Header'); %>
+    <section>
+       
+           <div class="post-detail">
+
+           <div class="post-detail-img">
+           
+            <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="" srcset="">
+           <!-- remove the above img tage and uncomment the below comment and use it to display the article image -->
+            <!-- <img src="http://localhost:5000/<%=Article.image%>"/> -->
+           </div>
+           <div class="post-detail-content">
+        
+            <h1><%=Article.title%></h1>
+            <span>Author: Johana Gitari,Created: 15:30</span>
+            <p><%=Article.description%></p>
+          </div>
+
+
+           </div>
+       
+       
+    </section>
+    
+</body>
+</html>

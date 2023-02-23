@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../partials/Head'); %>
+</head>
+<body>
+    <%- include('../../partials/Dash'); %>
+    
+    <section>
+        <%Articles.map((article)=>{%>
+           <div class="post">
+
+           <div class="post-img">
+            
+            
+            <%if(!article.image){%>
+             <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdevelopers.elementor.com%2Fdocs%2Fhooks%2Fplaceholder-image%2F&psig=AOvVaw3XYqBiBdGfIal9hY74Oxg6&ust=1677248592937000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPiri4Psq_0CFQAAAAAdAAAAABAE" alt="" srcset="">
+              <!-- <img src="<%=article.image%>"/> -->
+            <%}else{%>
+              <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="" srcset="" style="width:450px;height:auto">
+              <!-- replace the image above with what is commented below to access article image -->
+              <!-- <img src="<%=article.image%>"/> -->
+            <%}%>
+           </div>
+           <div class="post-content">
+        
+            <a href="/admin/ArticleDetails/<%=article.id%>">
+              <h1><%=article.title%></h1>
+            <span>Author: Johana Gitari,Created: 15:30</span>
+            <%if(!article.summary){%>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa commodi voluptatum corporis iusto impedit reprehenderit aliquam, minima tenetur illum quos placeat, reiciendis voluptatibus nam velit eaque quidem quibusdam! Sint, fugit?</p>
+            <%}else{%>
+              <p><%=article.summary%></p>
+            <%}%>
+            </a>
+          <div class="btn">
+            <a href="/admin/ArticleDetails/<%=article.id%>"> READ MORE</a>
+          </div>
+        </div>
+
+
+           </div>
+        <%})%>
+</body>
+</html>
+.

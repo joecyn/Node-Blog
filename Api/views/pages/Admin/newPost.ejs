@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../partials/Head'); %>
+</head>
+<body>
+    <%- include('../../partials/Dash'); %>
+   <div class="new_post">
+    <form action="/admin/newPost"  method="post" enctype="multipart/form-data">
+        <h1>NEW POST</h1>
+        <div>
+            <input type="text" placeholder="Title" name="title"/>
+        </div>
+        <div>
+            <input  type="text"  name="category" placeholder="Category"/>
+        </div>
+       <div>
+        <input type="file" name="image" id="" required>
+       </div>
+       <input type="text" placeholder="Title" name="summary"  aria-placeholder="Summary"/>
+        <div>
+            <textarea name="description"  cols="30" rows="10" id="description"></textarea>
+        </div>
+        <div>
+            <button type="submit">CREATE</button>
+        </div>
+    </form>
+   </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/Head'); %>
+</head>
+<body>
+    <%- include('../partials/Header'); %>
+    <section>
+        <%Articles.map((article)=>{%>
+           <div class="post">
+
+           <div class="post-img">
+            <img src="http://localhost:5000/<%=article.image%>"/>
+           </div>
+           <div class="post-content">
+        
+            <h1><%=article.title%></h1>
+            <span>Author: Johana Gitari,Created: 15:30</span>
+            <%if(!article.summary){%>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa commodi voluptatum corporis iusto impedit reprehenderit aliquam, minima tenetur illum quos placeat, reiciendis voluptatibus nam velit eaque quidem quibusdam! Sint, fugit?</p>
+            <%}else{%>
+              <p><%=article.summary%></p>
+            <%}%>
+          <div class="btn">
+            <a href="/SingleArticle/<%=article.id%>"> READ MORE</a>
+          </div>
+        </div>
+
+
+           </div>
+        <%})%>
+       
+    </section>
+    
+</body>
+</html>
